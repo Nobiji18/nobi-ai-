@@ -1,0 +1,69 @@
+Build a native Android app called "NOBI AI" — an all-in-one AI assistant app powered by Gemini API. The app must be fully functional, stable, and error-free — no crashes, no half-working features.
+
+1. CHAT INTERFACE
+- Conversational chat UI with Gemini, streaming (typing) responses
+- Multi-turn memory (remembers context)
+- User can upload/attach any image (from gallery or camera) directly in chat — AI analyzes the image and gives solutions/answers/explanations based on it (e.g. solve a math problem from photo, identify an object, debug a code screenshot, describe a photo)
+- Copy button on every message (text) to copy to clipboard, with "Copied!" confirmation toast
+- Long-press message options: copy, edit, delete, resend
+- "New Chat" and "Clear Chat" buttons (with confirmation dialog before clearing)
+- Full chat history list (saved locally using Room database) with title, date, preview — searchable
+- Rename/delete individual chats, and "Clear All History" option in settings with confirmation
+- Voice input (speech-to-text) and text-to-speech output
+- Dark mode/light mode toggle
+- Share full conversation as text
+
+2. REAL-TIME RESEARCH MODULE
+- Google Search grounding for live, up-to-date answers with clickable source links
+- "Research Mode" toggle on/off
+- Copy button on results
+
+3. WEBSITE BUILDER MODULE
+- Generate full HTML/CSS/JS from natural language description
+- Live preview in WebView, editable via follow-up prompts
+- Copy code button + export as .zip download
+
+4. CODE GENERATOR MODULE
+- Generate complete multi-file code projects in any language from natural language
+- Syntax-highlighted code viewer with copy button on every code block
+- Export/download all files together
+- Short explanation below generated code
+
+5. IMAGE GENERATION MODULE (AI gives images to user)
+- Text-to-image generation using Imagen
+- Style options: realistic, cartoon, anime, 3D
+- Generate 2-4 variations per prompt
+- Every generated image has Copy, Save, Share, and Download buttons
+- Auto-save to in-app gallery
+
+6. IMAGE EDITING MODULE (user gives image, AI edits/returns it)
+- Upload photo from gallery or camera
+- AI edits based on text prompt: remove/change background, add/remove objects, restore old photos, style transfer
+- Before/after comparison view
+- Copy, Save, Share, Download buttons on edited image
+
+7. FILE MANAGER
+- Central "My Files" section: all generated code, images, website exports in one place
+- Copy, share, rename, delete on every file
+- Search and filter by type (code/image/website)
+- File size shown for each item
+
+8. RELIABILITY & ERROR HANDLING (must work properly, no failures)
+- Proper "No Internet Connection" message instead of crashing
+- "Retry" button if any AI response or generation fails
+- Timeout handling with "taking longer than usual" message after 30-40 seconds
+- Loading/progress indicator for every generation task (chat, code, website, image)
+- Rate-limit protection: if user sends requests too fast, show "please wait" instead of erroring out
+- Clear error messages if API key is invalid/expired, with fix instructions
+- Image compression before saving to avoid excessive storage usage
+- "Clear Cache" option in settings to free up storage
+
+9. SETTINGS & GENERAL
+- App name: "NOBI AI" with a simple modern wordmark/icon
+- Settings: API key management, Clear All Chat History, Clear Cache, Dark/Light mode, Language selection, About/Version info
+- Bottom navigation: Chat | Research | Code | Images | Files
+- Onboarding screens on first launch explaining what the app can do
+- Ask for camera/mic/storage permissions only when actually needed
+- Clean, modern UI using Jetpack Compose and Kotlin best practices, fully responsive on different screen sizes
+
+Use Google Search grounding for research, Imagen (Nano Banana) for image generation and image editing/understanding, and standard Gemini API (multimodal, supporting image input) for chat, image analysis, and code generation. Ensure every feature listed above is fully implemented and working, not placeholder UI.
